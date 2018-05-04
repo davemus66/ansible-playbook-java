@@ -1,0 +1,23 @@
+---
+- hosts: linux
+  become: yes
+  become_user: root
+  roles:
+     - ansible-role-java
+       when: "ansible_os_family == 'RedHat'"
+       java_packages:
+        - java-1.8.0-openjdk
+
+
+#  tasks:
+#    - name: test connection
+#      ping:
+
+
+#- hosts: windows
+#  remote_user: davemus
+#  tasks:
+#    - name: test connection
+#      win_ping:
+#
+
