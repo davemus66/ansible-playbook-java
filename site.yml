@@ -4,9 +4,6 @@
   become_user: root
   roles:
      - ansible-role-java
-       java_packages:
-        - java-1.8.0-openjdk
-
 
 #  tasks:
 #    - name: test connection
